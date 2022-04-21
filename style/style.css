@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-size: large;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 1rem;
+  background-color: #cbcbcb;
+}
+
+nav {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+button {
+  padding: 1rem 1.5rem;
+  max-width: 12rem;
+  flex-shrink: 1;
+  background-color: aquamarine;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: #888888;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #0c0c0c;
+  background-color: rgb(172, 241, 218);
+  border-color: #3d3d3d;
+}
+
+button:active {
+  color: #c9c8c8;
+  background-color: rgb(53, 129, 104);
+}
+
+input {
+  padding: 0 7rem;
+  margin: 0 1rem;
+  color: #88888808;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: black;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-task {
+  display: flex;
+}
+
+.todo-info {
+  padding: 5px;
+  gap: 1rem;
+}
+
+.todo__counter {
+  align-items: center;
+  gap: 1rem;
+}
+.search {
+  display: flex;
+  flex: 1;
+}
+
+.todo-card {
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.todo-card p {
+  background-color: aliceblue;
+}
+
+.card-check {
+  align-self: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.checkbox__input {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.checkbox__label {
+  padding-left: 25px;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.checkbox__label:before {
+  content: "";
+  display: block;
+  padding: 1rem;
+  background-color: aquamarine;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  transition: background 0.3s ease;
+}
+
+.checkbox1__label:after {
+  content: "🗸";
+  display: block;
+  padding: 1rem;
+  opacity: 1;
+  font-size: 2rem;
+
+  position: absolute;
+  top: -100%;
+  left: -30%;
+  z-index: 2;
+
+  transition: opacity 0.3s ease;
+}
+
+.todo-card__text p {
+  padding: 2rem 10rem;
+  margin: 2rem 0;
+}
+
+.todo-card__other {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
